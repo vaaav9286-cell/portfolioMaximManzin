@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Максим Манзин - Портфолио</title>
+    <style>
+        /* Общие стили */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth; /* Плавная прокрутка */
+        }
+
+        .section {
+            padding: 80px 40px;
+            text-align: center: 1200px;
+            margin: auto;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Навигация */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 253, 250, 0.95); /* Цвет фона навигации */
+            box-shadow: 0 2px 10px rgba(0,0,0,0 z-index: ;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333; /* Цвет текста ссылок */
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #8B4513; /* Цвет при наведении */
+        }
+
+        /* Секция "Приветствие" */
+        #hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('ВАШ_ФОН_ЗДЕСЬ.jpg'); /* Прикрепите фоновое изображение */
+            background-size: cover;
+            background-position: center;
+            color: white; /* Цвет текста на фоне */
+            text-align: center;
+        }
+        #hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4); /* Затемнение фона */
+        }
+        #hero > * {
+            position: relative; /* Чтобы контент был поверх затемнения */
+            z-index: 1;
+        }
+
+        #hero img {
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border: 5px solid white;
+            margin-bottom: 20px;
+        }
+
+        /* Секция "Обо мне" */
+        #about {
+            background-color: #f9f9f9; /* Цвет фона секции */
+        }
+
+        #about img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 20px;
+            float: left;
+            margin-right: 40px;
+        }
+
+        /* Секция "Навыки" */
+        #skills {
+            background-color: #fff; /* Цвет фона секции */
+        }
+
+        .skill-item {
+            display: inline-block;
+            background-color: #f0f0f0; /* Цвет фона карточки навыка */
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            width: 120px;
+        }
+
+        /* Секция "Портфолио" */
+        #portfolio {
+            background-color: #f9f9f9; /* Цвет фона секции */
+        }
+
+        .project {
+            background-color: white; /* Цвет фона проекта */
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        .project img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 8px;
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* Секция "Контакты" */
+        #contact {
+            background-color: #fff; /* Цвет фона секции */
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 10px;
+            font-size: 24px;
+            color: #333; /* Цвет иконок */
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #8B4513; /* Цвет иконок при наведении */
+        }
+
+        /* Секция "Шахматы" */
+        #chess {
+            background-color: #f0e6d2; /* Теплый телесный цвет для шахматной темы */
+        }
+
+        #chess img {
+            width: 200px;
+            height: auto;
+            margin: 20px;
+        }
+
+        /* Подвал */
+        footer {
+            background-color: #333; /* Цвет фона подвала */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav>
+        <ul>
+            <li><a href="#hero">Главная</a></li>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#skills">Навыки</a></li>
+            <li><a href="#portfolio">Портфолио</a></li>
+            <li><a href="#chess">Шахматы</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <!-- Приветствие -->
+    <section id="hero">
+        <!-- Замените 'my-photo-main.jpg' на путь к вашему фото -->
+        <img src="my-photo-main.jpg" alt="Максим Манзин">
+        <h1>Привет, я Максим Манзин</h1>
+        <p>Веб и любитель шахмат</p>
+    </section>
+
+    <!-- Обо мне -->
+    <section id="about" class="section">
+        <h2>Обо мне</h2>
+        <img src="my-photo-about.jpg" alt="Максим за работой"> <!-- Замените на ваше фото -->
+        <p>Меня зовут Максим, и я специализируюсь на создании современных и адаптивных веб-сайтов.</p>
+        <p>Я работаю с HTML и CSS, чтобы воплотить в жизнь дизайнерские идеи, и использую Figma для прототипирования интерфейсов. Также имею опыт работы с платформой Tilda, что позволяет быстро создавать функциональные лендинги.</p>
+        <p>В свободное время я увлекаюсь игрматы — это помогает мне развивать стратегическое мышление и концентрацию, навыки, которые отлично переносятся и в веб-разработку.</p>
+    </section>
+
+    <!-- Навыки -->
+    <section id="skills" class="section">
+        <h2>Мои навыки</h2>
+        <div class="skill-item">HTML</div>
+        <div class="skill-item">CSS</div>
+        <div class="skill-item">Figma</div>
+        <div class="skill-item">Tilda</div>
+    </section>
+
+    <!-- Портфолио -->
+    <section id="portfolio" class="section">
+        <h2>Портфолио</h2>
+        <div class="project">
+            <!-- Замените 'project1-preview.jpg' на изображение проекта -->
+            <img src="project1-preview.jpg" alt="Превью проекта 1">
+            <h3>Проект №1</h3>
+            <p>Краткое описание проекта. Опишите, какие технологии использовались, и чем он интересен.</p>
+            <!-- Замените '#' на прямую ссылку на проект -->
+            <a href="#" target="_blank">Посмотреть проект</a>
+        </div>
+        <div class="project">
+            <img src="project2-preview.jpg" alt="Превью проекта 2">
+            <h3>Проект №2</h3>
+            <p>Краткое описание второго проекта.</p>
+            <a href="#" target="_blank">Посмотреть проект</a>
+        </div>
+        <!-- Добавьте больше блоков .project по мере необходимости -->
+    </section>
+
+    <!-- Шахматы -->
+    <section id="chess" class="section">
+        <h2>Шахматы</h2>
+        <!-- Загрузите изображение связанное с шахматами -->
+        <img src="chess-image.jpg" alt="Шахматы">
+        <p>Одно из моих увлечений — игра в шахматы. Это не только увлекательное хобби, но и способ держать ум в тонусе. Я регулярно играю онлайн и стараюсь улучшать свой рейтинг.</p>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="section">
+        <h2>Контакты</h2>
+        <p>Если вы хотите обсудить сотрудничество или просто побеседовать, пишите мне!</p>
+        <div class="social-links">
+            <!-- Замените '#' на ваши реальные ссылки -->
+            <a href="#" target="_blank">Email</a>
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Telegram</a>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <p>&copy; 2026 Максим Манзин. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
